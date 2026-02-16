@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blink Duochrome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="outputCanvas" aria-label="Webcam output"></canvas>
+    <div id="speechHud" class="speech-hud" aria-live="polite"></div>
+    <div id="thresholdHud" class="hud" aria-hidden="true">
+      <label for="thresholdSlider">threshold</label>
+      <input id="thresholdSlider" type="range" min="0" max="255" value="128" />
+      <span id="thresholdValue">128</span>
+      <label for="maskSizeSlider">size</label>
+      <input id="maskSizeSlider" type="range" min="0" max="60" value="24" />
+      <span id="maskSizeValue">24</span>
+      <label for="maskBlurSlider">blur</label>
+      <input id="maskBlurSlider" type="range" min="4" max="160" value="34" />
+      <span id="maskBlurValue">34</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
